@@ -14,8 +14,14 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './tests',
+<<<<<<< HEAD
   /* Run tests in files in parallel */
   fullyParallel: true,
+=======
+  timeout: 200*1000,
+  /* Run tests in files in parallel */
+  fullyParallel: false,
+>>>>>>> 0c5b78be611caf12f79f419761fe4d6a54028c67
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -26,11 +32,23 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+<<<<<<< HEAD
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+=======
+    /* Base URL to use in actions like `await page.goto('/')`. */
+    // baseURL: 'http://localhost:3000',
+
+    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    navigationTimeout: 60000, // 60s
+    actionTimeout: 30000,
+    trace: 'on-first-retry',
+    screenshot: 'on',
+    video:'on'
+>>>>>>> 0c5b78be611caf12f79f419761fe4d6a54028c67
   },
 
   /* Configure projects for major browsers */
@@ -40,7 +58,11 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
+<<<<<<< HEAD
     {
+=======
+   /* {
+>>>>>>> 0c5b78be611caf12f79f419761fe4d6a54028c67
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -48,7 +70,11 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
+<<<<<<< HEAD
     },
+=======
+    },*/
+>>>>>>> 0c5b78be611caf12f79f419761fe4d6a54028c67
 
     /* Test against mobile viewports. */
     // {

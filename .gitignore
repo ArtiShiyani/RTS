@@ -5,4 +5,7 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+<<<<<<< HEAD
 /playwright/.auth/
+=======
+>>>>>>> 0c5b78be611caf12f79f419761fe4d6a54028c67
